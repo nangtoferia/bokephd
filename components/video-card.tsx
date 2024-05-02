@@ -14,12 +14,9 @@ const VideoCard = ({ video }: any) => {
         '@context': 'https://schema.org',
         '@type': 'Article',
         headline: `${video.title} - ${SITENAME}`,
-        image: file.splash_img,
+        image: video.splash_img,
         description: `${video.title} di ${SITENAME} Video Bokep Indo Jepang Jav Barat Simontok Viral Terbaru Bocil Ngentot Jilbab Smp Mama Sma`,
-        url: `https://bokephd.pages.dev/v/${file.filecode}`,
-        datePublished: new Date(
-            file.uploaded + ".000Z"
-        ).toISOString()
+        url: `https://bokephd.pages.dev/v/${file.filecode}`
         }
     return (
         <Card className="border-0 rounded-none md:border-[1px] md:rounded-md transform transition duration-200 md:hover:scale-[101%] md:hover:shadow-lg">
