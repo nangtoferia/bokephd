@@ -1,6 +1,7 @@
 import { Card, CardContent } from "./ui/card";
 import { humanDuration, naturalTime } from "@/lib/utils";
 
+import { SITENAME } from "@/lib/constants";
 import { Badge } from "./ui/badge";
 import { CalendarIcon } from "@radix-ui/react-icons";
 import LikeButton from "./like-button";
@@ -12,9 +13,9 @@ const VideoCard = ({ video }: any) => {
             const jsonLd = {
         '@context': 'https://schema.org',
         '@type': 'Article',
-        headline: `${file.title} - ${SITENAME}`,
+        headline: `${video.title} - ${SITENAME}`,
         image: file.splash_img,
-        description: `${file.title} di ${SITENAME} Video Bokep Indo Jepang Jav Barat Simontok Viral Terbaru Bocil Ngentot Jilbab Smp Mama Sma`,
+        description: `${video.title} di ${SITENAME} Video Bokep Indo Jepang Jav Barat Simontok Viral Terbaru Bocil Ngentot Jilbab Smp Mama Sma`,
         url: `https://bokephd.pages.dev/v/${file.filecode}`,
         datePublished: new Date(
             file.uploaded + ".000Z"
