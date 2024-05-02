@@ -9,6 +9,17 @@ import React from "react";
 import Thumbnail from "./thumbnail";
 
 const VideoCard = ({ video }: any) => {
+            const jsonLd = {
+        '@context': 'https://schema.org',
+        '@type': 'Article',
+        headline: `${file.title} - ${SITENAME}`,
+        image: file.splash_img,
+        description: `${file.title} di ${SITENAME} Video Bokep Indo Jepang Jav Barat Simontok Viral Terbaru Bocil Ngentot Jilbab Smp Mama Sma`,
+        url: `https://bokephd.pages.dev/v/${file.filecode}`,
+        datePublished: new Date(
+            file.uploaded + ".000Z"
+        ).toISOString()
+        }
     return (
         <Card className="border-0 rounded-none md:border-[1px] md:rounded-md transform transition duration-200 md:hover:scale-[101%] md:hover:shadow-lg">
             <div className="relative">
@@ -23,6 +34,10 @@ const VideoCard = ({ video }: any) => {
                 />
                 </Link>
             </div>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
             <CardContent className="p-1.5"><h3>
                 <Link
                     href={`/v/${video.file_code}`}
