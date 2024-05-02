@@ -16,7 +16,7 @@ const VideoCard = ({ video }: any) => {
         headline: `${video.title} - ${SITENAME}`,
         image: video.splash_img,
         description: `${video.title} di ${SITENAME} Video Bokep Indo Jepang Jav Barat Simontok Viral Terbaru Bocil Ngentot Jilbab Smp Mama Sma`,
-        url: `https://bokephd.pages.dev/v/${video.filecode}`
+        url: `https://bokephd.pages.dev/v/${video.file_code}`
         }
     return (
         <Card className="border-0 rounded-none md:border-[1px] md:rounded-md transform transition duration-200 md:hover:scale-[101%] md:hover:shadow-lg">
