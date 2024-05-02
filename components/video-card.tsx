@@ -13,7 +13,7 @@ const VideoCard = ({ video }: any) => {
             const jsonLd = {
         '@context': 'https://schema.org',
         '@type': 'Article',
-        title: `${video.title} - ${SITENAME}`,
+        headline: `${video.title} - ${SITENAME}`,
         image: video.splash_img,
         description: `${video.title} di ${SITENAME} Video Bokep Indo Jepang Jav Barat Simontok Viral Terbaru Bocil Ngentot Jilbab Smp Mama Sma`,
         url: `https://bokephd.pages.dev/v/${video.file_code}`
