@@ -6,6 +6,7 @@ import {
     RocketIcon,
     Share1Icon,
 } from "@radix-ui/react-icons";
+import Script from "next/script";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Metadata, ResolvingMetadata } from "next";
 import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
@@ -158,6 +159,7 @@ const jsonLd = {
         />
         {/* ... */}
         </section>
+<Script src="https://js.juicyads.com/jp.php?c=947403z2v256s2x2w264x294&u=http%3A%2F%2Fwww.juicyads.rocks"/>
             <iframe
                 className="w-full h-[30vh] md:h-[55vh] lg:h-[70vh]"
                 src={`https://${upstream}/e/${file.filecode}`}
