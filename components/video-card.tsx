@@ -1,22 +1,11 @@
 import { Card, CardContent } from "./ui/card";
-import { humanDuration, naturalTime } from "@/lib/utils";
 
-import { SITENAME } from "@/lib/constants";
 import { Badge } from "./ui/badge";
-import { CalendarIcon } from "@radix-ui/react-icons";
-import LikeButton from "./like-button";
 import Link from "next/link";
 import React from "react";
 import Thumbnail from "./thumbnail";
 
 const VideoCard = ({ video }: any) => {
-            const jsonLd = {
-        '@context': 'https://schema.org',
-        '@type': 'Article',
-        headline: `${video.title} - ${SITENAME}`,
-        image: video.single_img,
-        url: `https://bokephd.pages.dev/v/${video.file_code}`
-        }
     return (
         <Card className="border-0 rounded-none md:border-[1px] md:rounded-md transform transition duration-200 md:hover:scale-[101%] md:hover:shadow-lg">
             <div className="relative">
@@ -25,16 +14,11 @@ const VideoCard = ({ video }: any) => {
                     title={`Watch ${video.title}`}
                     >
                 <Thumbnail
-                    single_img={video.single_img}
-                    splash_img={video.splash_img}
+                    thumbnail={video.thumbnail}
                     title={video.title}
                 />
                 </Link>
             </div>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
             <CardContent className="p-1.5"><h3>
                 <Link
                     href={`/v/${video.file_code}`}
