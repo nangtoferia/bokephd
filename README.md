@@ -1,2 +1,1 @@
-# bokephd
-bokephd
+# [bokephd](https://bokephd.pages.dev)
