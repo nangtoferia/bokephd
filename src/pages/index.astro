@@ -10,7 +10,7 @@ export const prerender = true;
 const allVideos: VideoData[] = await getAllVideos();
 
 const videosByCategory: { [key: string]: VideoData[] } = {};
-const numberOfVideosPerCategory = 15; // Jumlah video acak yang ingin ditampilkan per kategori
+const numberOfVideosPerCategory = 16; // Jumlah video acak yang ingin ditampilkan per kategori
 
 allVideos.forEach(video => {
   if (!videosByCategory[video.category]) {
@@ -39,7 +39,7 @@ allCategoryNames.forEach(categoryName => {
 const sortedCategories = Object.keys(finalVideosByCategory).sort(); // Urutkan kategori secara alfabetis untuk tampilan
 
 
-const numberOfRandomVideos = 15;
+const numberOfRandomVideos = 16;
 
 const categoryVideoIds = new Set(
   Object.values(finalVideosByCategory).flat().map(v => v.id) // Gunakan finalVideosByCategory
@@ -84,7 +84,7 @@ randomVideos.forEach(video => {
 const preconnectDomains = Array.from(allDomains);
 
 const breadcrumbs = [
-  { name: 'Home', url: '/' },
+  { name: 'Home', url: `${url}` },
 ];
 
 const currentUrl = url;
@@ -138,7 +138,7 @@ const siteDescription = desk;
         sortedCategories.map(categoryName => (
           <div class="category-group">
             <h2 class="category-title">
-              <a href={`/category/${slugify(categoryName)}/1`} class="category-link">
+              <a href={`${currentUrl}/category/${slugify(categoryName)}/1`} class="category-link">
                 {categoryName} &rarr;</a>
             </h2>
             <div class="video-grid">
@@ -152,7 +152,7 @@ const siteDescription = desk;
             </div>
             {videosByCategory[categoryName].length > numberOfVideosPerCategory && ( // Cek dari videosByCategory (yang asli, lengkap)
               <div class="view-all-button-container">
-                <a href={`/category/${slugify(categoryName)}/1`} class="view-all-button">Lihat Semua di kategori {categoryName}</a>
+                <a href={`${currentUrl}/category/${slugify(categoryName)}/1`} class="view-all-button">Lihat Semua di kategori {categoryName}</a>
               </div>
             )}
           </div>
